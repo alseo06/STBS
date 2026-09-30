@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Borneo Explorer | Sarawak Tour Booking</title>
+
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+          href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- HOME PAGE -->
+<!-- ================================================= -->
+
+<div data-role="page"
+     id="homePage">
+
+
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <div class="container">
+
+            <div class="navbar-custom">
+
+
+                <!-- LOGO -->
+
+                <div class="logo">
+
+                    <span class="logo-icon">🌿</span>
+
+                    <div>
+
+                        <h2>Borneo</h2>
+
+                        <small>EXPLORER</small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+
+                <nav>
+
+                    <a href="#homePage"
+                       data-transition="slide">
+
+                        Explore
+
+                    </a>
+
+
+                    <a href="#packagesPage"
+                       data-transition="slide">
+
+                        Tour Packages
+
+                    </a>
+
+
+                    <a href="#bookingPage"
+                       data-transition="slide">
+
+                        Booking
+
+                    </a>
+
+
+                    <a href="#contactPage"
+                       data-transition="slide">
+
+                        Contact
+
+                    </a>
+
+                </nav>
+
+
+                <!-- BOOK BUTTON -->
+
+                <a href="#bookingPage"
+                   class="book-button"
+                   data-transition="slide">
+
+                    Book Sarawak
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- HERO SECTION -->
+    <!-- ================================================= -->
+
+    <section class="hero-section">
+
+
+        <div class="hero-overlay">
+
+
+            <div class="container">
+
+
+                <div class="hero-content">
+
+
+                    <span class="hero-label">
+
+                        🌿 BORNEO ECO-TOURISM
+
+                    </span>
+
+
+                    <h1>
+
+                        Discover The Magic of
+                        <br>
+
+                        <span>Kuching</span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Explore Sarawak's hidden treasures,
+                        amazing wildlife, cultural heritage
+                        and unforgettable adventures.
+
+                    </p>
+
+
+                    <!-- SEARCH / BOOKING BAR -->
+
+                    <div class="search-box">
+
+
+                        <div class="search-item">
+
+                            <label>
+
+                                TOUR CATEGORY
+
+                            </label>
+
+                            <select id="tourCategory">
+
+                                <option>
+                                    All Experiences
+                                </option>
+
+                                <option>
+                                    Eco & Wildlife
+                                </option>
+
+                                <option>
+                                    Sarawak Heritage
+                                </option>
+
+                                <option>
+                                    River & Sunset
+                                </option>
+
+                                <option>
+                                    Day Trips
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="search-item">
+
+                            <label>
+
+                                DEPARTURE DATE
+
+                            </label>
+
+                            <input type="date"
+                                   id="departureDate">
+
+                        </div>
+
+
+
+                        <div class="search-item">
+
+                            <label>
+
+                                TRAVELLERS
+
+                            </label>
+
+                            <select id="travellers">
+
+                                <option>
+                                    1 Adult
+                                </option>
+
+                                <option>
+                                    2 Adults
+                                </option>
+
+                                <option>
+                                    3 Adults
+                                </option>
+
+                                <option>
+                                    4 Adults
+                                </option>
+
+                                <option>
+                                    5+ Adults
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <button class="availability-button"
+                                onclick="checkAvailability()">
+
+                            🔍 Check Availability
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- CATEGORY SECTION -->
+    <!-- ================================================= -->
+
+    <section class="category-section">
+
+
+        <div class="container">
+
+
+            <div class="category-title">
+
+                <div>
+
+                    <h2>
+                        Explore Sarawak
+                    </h2>
+
+                    <p>
+                        Discover unforgettable experiences
+                    </p>
+
+                </div>
+
+
+                <span class="carbon-badge">
+
+                    🌱 100% Carbon Neutral
+
+                </span>
+
+            </div>
+
+
+
+            <div class="category-buttons">
+
+                <button class="category-btn active">
+
+                    All Experiences
+
+                </button>
+
+                <button class="category-btn">
+
+                    Eco & Wildlife
+
+                </button>
+
+                <button class="category-btn">
+
+                    Sarawak Heritage
+
+                </button>
+
+                <button class="category-btn">
+
+                    River & Sunset
+
+                </button>
+
+                <button class="category-btn">
+
+                    Day Trips
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- TOUR PACKAGE PREVIEW -->
+    <!-- ================================================= -->
+
+    <section class="packages-section">
+
+
+        <div class="container">
+
+
+            <div class="row g-4">
+
+
+                <!-- PACKAGE 1 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="tour-card">
+
+
+                        <div class="tour-image">
+
+                            <img src="img/bakonationalpark.jpg"
+                                 alt="Bako National Park">
+
+                            <span class="tour-badge">
+
+                                Best Seller
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="tour-content">
+
+                            <small>
+                                🐒 Wildlife Guaranteed
+                            </small>
+
+                            <h3>
+                                Bako Coastal Reserve
+                            </h3>
+
+                            <p>
+
+                                Explore rainforest trails
+                                and meet amazing wildlife.
+
+                            </p>
+
+
+                            <div class="tour-info">
+
+                                ⭐ 4.96
+
+                                <span>
+                                    · Full Day
+                                </span>
+
+                            </div>
+
+
+                            <div class="tour-bottom">
+
+                                <strong>
+                                    RM180
+                                </strong>
+
+                                <a href="#bookingPage"
+                                   data-transition="slide">
+
+                                    Book
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PACKAGE 2 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="tour-card">
+
+
+                        <div class="tour-image">
+
+                            <img src="img/kpgbdya.jpg"
+                                 alt="Sarawak Cultural Village">
+
+
+                            <span class="tour-badge">
+
+                                Cultural Icon
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="tour-content">
+
+                            <small>
+                                🏠 Living Museum
+                            </small>
+
+                            <h3>
+                                Sarawak Cultural Village
+                            </h3>
+
+                            <p>
+
+                                Discover Sarawak's
+                                traditional culture.
+
+                            </p>
+
+
+                            <div class="tour-info">
+
+                                ⭐ 4.88
+
+                                <span>
+                                    · Half Day
+                                </span>
+
+                            </div>
+
+
+                            <div class="tour-bottom">
+
+                                <strong>
+                                    RM120
+                                </strong>
+
+                                <a href="#bookingPage"
+                                   data-transition="slide">
+
+                                    Book
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PACKAGE 3 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="tour-card">
+
+
+                        <div class="tour-image">
+
+                            <img src="img/river.jpg"
+                                 alt="Sarawak River">
+
+
+                            <span class="tour-badge">
+
+                                Popular
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="tour-content">
+
+                            <small>
+                                🌅 Romantic
+                            </small>
+
+                            <h3>
+                                Sarawak River Sunset
+                            </h3>
+
+                            <p>
+
+                                Enjoy beautiful sunset
+                                views along the river.
+
+                            </p>
+
+
+                            <div class="tour-info">
+
+                                ⭐ 4.92
+
+                                <span>
+                                    · 2.5 Hours
+                                </span>
+
+                            </div>
+
+
+                            <div class="tour-bottom">
+
+                                <strong>
+                                    RM90
+                                </strong>
+
+                                <a href="#bookingPage"
+                                   data-transition="slide">
+
+                                    Book
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PACKAGE 4 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="tour-card">
+
+
+                        <div class="tour-image">
+
+                            <img src="img/orgutanfeeding.jpg"
+                                 alt="Orangutan">
+
+                            <span class="tour-badge">
+
+                                Eco-Hero
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="tour-content">
+
+                            <small>
+                                🦧 Orangutan Feeding
+                            </small>
+
+                            <h3>
+                                Semenggoh Wildlife
+                            </h3>
+
+                            <p>
+
+                                Meet rescued orangutans
+                                in their natural habitat.
+
+                            </p>
+
+
+                            <div class="tour-info">
+
+                                ⭐ 4.97
+
+                                <span>
+                                    · 4 Hours
+                                </span>
+
+                            </div>
+
+
+                            <div class="tour-bottom">
+
+                                <strong>
+                                    RM150
+                                </strong>
+
+                                <a href="#bookingPage"
+                                   data-transition="slide">
+
+                                    Book
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- TOUR PACKAGES PAGE -->
+<!-- ================================================= -->
+
+<div data-role="page"
+     id="packagesPage">
+
+
+    <header class="page-header">
+
+        <h1>
+            Sarawak Tour Packages
+        </h1>
+
+        <p>
+            Choose your next adventure
+        </p>
+
+    </header>
+
+
+    <main class="container page-content">
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="package-box">
+
+                    <h3>
+                        🌿 Bako National Park
+                    </h3>
+
+                    <p>
+                        Full-day rainforest and wildlife
+                        adventure.
+                    </p>
+
+                    <button class="btn btn-success"
+                            data-bs-toggle="tooltip"
+                            title="Duration: 8 Hours">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+                <div class="package-box">
+
+                    <h3>
+                        🏠 Cultural Village
+                    </h3>
+
+                    <p>
+                        Experience the traditional cultures
+                        of Sarawak.
+                    </p>
+
+                    <button class="btn btn-success"
+                            data-bs-toggle="popover"
+                            data-bs-title="Package Information"
+                            data-bs-content="Includes cultural activities, traditional houses and local performances.">
+
+                        More Info
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-4">
+
+                <div class="package-box">
+
+                    <h3>
+                        🌅 River Sunset Cruise
+                    </h3>
+
+                    <p>
+                        Relax and enjoy the beautiful
+                        Sarawak sunset.
+                    </p>
+
+                    <button class="btn btn-success"
+                            data-bs-toggle="tooltip"
+                            title="Duration: 2.5 Hours">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- BOOKING PAGE -->
+<!-- ================================================= -->
+
+<div data-role="page"
+     id="bookingPage">
+
+
+    <header class="page-header">
+
+        <h1>
+            Book Your Sarawak Adventure
+        </h1>
+
+        <p>
+            Fill in your details to reserve a tour.
+        </p>
+
+    </header>
+
+
+    <main class="container page-content">
+
+
+        <div class="booking-container">
+
+
+            <form id="bookingForm"
+                  onsubmit="return validateBookingForm()">
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input type="text"
+                               id="name"
+                               class="form-control"
+                               placeholder="Enter your full name">
+
+                        <small id="nameError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input type="tel"
+                               id="phone"
+                               class="form-control"
+                               placeholder="Enter phone number">
+
+                        <small id="phoneError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               class="form-control"
+                               placeholder="example@email.com">
+
+                        <small id="emailError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Travel Date
+                        </label>
+
+                        <input type="date"
+                               id="travelDate"
+                               class="form-control">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Number of Participants
+                        </label>
+
+                        <input type="number"
+                               id="participants"
+                               class="form-control"
+                               min="1"
+                               max="20">
+
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label>
+                            Tour Package
+                        </label>
+
+                        <select id="package"
+                                class="form-select">
+
+                            <option value="">
+                                Select Package
+                            </option>
+
+                            <option>
+                                Bako National Park
+                            </option>
+
+                            <option>
+                                Sarawak Cultural Village
+                            </option>
+
+                            <option>
+                                Sarawak River Sunset
+                            </option>
+
+                            <option>
+                                Semenggoh Wildlife
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ETHICAL CONSENT -->
+
+                <div class="consent-box">
+
+                    <input type="checkbox"
+                           id="consent">
+
+                    <label for="consent">
+
+                        I agree that my information may be
+                        collected and used responsibly for
+                        tour booking purposes.
+
+                    </label>
+
+                </div>
+
+
+                <small id="consentError"
+                       class="error-message">
+                </small>
+
+
+
+                <button type="submit"
+                        class="submit-button">
+
+                    Confirm Booking
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CONTACT PAGE -->
+<!-- ================================================= -->
+
+<div data-role="page"
+     id="contactPage">
+
+
+    <header class="page-header">
+
+        <h1>
+            Contact Us
+        </h1>
+
+        <p>
+            We are here to help with your Sarawak adventure.
+        </p>
+
+    </header>
+
+
+    <main class="container page-content text-center">
+
+
+        <button type="button"
+                class="btn contact-button"
+                data-bs-toggle="modal"
+                data-bs-target="#contactModal">
+
+            💬 Contact Borneo Explorer
+
+        </button>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- CONTACT MODAL -->
+<!-- ================================================= -->
+
+<div class="modal fade"
+     id="contactModal"
+     tabindex="-1">
+
+
+    <div class="modal-dialog modal-dialog-centered">
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+
+                    Contact Us
+
+                </h5>
+
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+
+                </button>
+
+            </div>
+
+
+
+            <div class="modal-body">
+
+
+                <form id="contactForm"
+                      onsubmit="return validateContactForm()">
+
+
+                    <div class="mb-3">
+
+                        <label>
+                            Name
+                        </label>
+
+                        <input type="text"
+                               id="contactName"
+                               class="form-control"
+                               placeholder="Your name">
+
+                        <small id="contactNameError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="mb-3">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input type="email"
+                               id="contactEmail"
+                               class="form-control"
+                               placeholder="Your email">
+
+                        <small id="contactEmailError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="mb-3">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea id="message"
+                                  class="form-control"
+                                  rows="5"
+                                  placeholder="Write your message">
+
+                        </textarea>
+
+                        <small id="messageError"
+                               class="error-message">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- CONSENT -->
+
+                    <div class="consent-box">
+
+                        <input type="checkbox"
+                               id="contactConsent">
+
+                        <label>
+
+                            I agree to the responsible use
+                            of my submitted information.
+
+                        </label>
+
+                    </div>
+
+
+                    <small id="contactConsentError"
+                           class="error-message">
+                    </small>
+
+
+                    <button type="submit"
+                            class="submit-button">
+
+                        Send Message
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT LIBRARIES -->
+<!-- ================================================= -->
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js">
+</script>
+
+
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JavaScript -->
+
+<script src="script.js" >
+</script>
+
+
+</body>
+
+</html>
